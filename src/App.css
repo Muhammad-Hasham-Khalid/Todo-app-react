@@ -1,38 +1,95 @@
-.App {
+body {
+  background: #64c6e1;
+  font-size: 20px;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px rgba(105, 105, 105, 0.425);
+  transition: 1s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.app-title {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-shadow: 3px 3px 3px rgba(105, 105, 105, 0.425);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  border: none;
+  padding: 3%;
+  margin: auto;
+  width: 90%;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container h2 {
+  color: #000;
+  text-shadow: 3px 3px 3px rgba(105, 105, 105, 0.425);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-text {
+  font-size: 20px;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.add-btn {
+  color: #fff;
+  background: rgb(0, 126, 0);
+  border-radius: 20px;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.list ul {
+  list-style: none;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.list li {
+  background: #fff;
+  border-radius: 5px;
+  padding: 8px;
+  color: #000;
+  margin: 2px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list li .btn {
+  color: #fff;
+  background-color: #f00;
+  border-radius: 3px;
+  padding: 5px;
+  border: none;
+}
+
+.list li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.crossed {
+  text-decoration: line-through;
 }
