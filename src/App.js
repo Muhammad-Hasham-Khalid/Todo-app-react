@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import logo from "./react-pic.png";
-import Header from "./Header";
+import Navbar from "./Navbar";
 
 class App extends React.Component {
   constructor(props) {
@@ -50,14 +50,18 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header src={logo} width="200" alt="Logo" content="Todo App React" />
+        <Navbar/>
+        <img
+        src={logo}
+        width="300" 
+        alt="Logo"
+        className="logo"
+      /> 
         <div className="container">
-          <h2>Add an Item...</h2>
-          <br />
           <input
             type="text"
             className="input-text"
-            placeholder="Write a ToDo"
+            placeholder="Write a Todo"
             required
             value={this.state.newItem}
             onChange={(e) => this.updateInput(e.target.value)}
@@ -80,7 +84,8 @@ class App extends React.Component {
                       checked={item.isDone}
                       onChange={() => this.updateCheck(item.id)}
                     />
-                    {item.value}
+                    <p>{item.isDone ? <del>{item.value}</del> : item.value}</p>
+                    {/* {item.value} */}
                     <button
                       className="btn"
                       onClick={() => this.deleteItem(item.id)}
